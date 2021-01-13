@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">vibration</string>
+    <string name="input_hint">Please input the vibration code</string>
+    <string name="title_text">Haptic Feedback Test</string>
+    <string name="SubmitButton">SUBMIT</string>
+</resources>
