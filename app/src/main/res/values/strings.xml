@@ -3,4 +3,8 @@
     <string name="input_hint">Please input the vibration code</string>
     <string name="title_text">Haptic Feedback Test</string>
     <string name="SubmitButton">SUBMIT</string>
+    <string name="straight">straight</string>
+    <string name="left">left</string>
+    <string name="right">right</string>
+    <string name="obstacle">obstacle</string>
 </resources>
