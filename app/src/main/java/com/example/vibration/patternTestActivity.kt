@@ -12,19 +12,21 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.vibration.databinding.ActivityMainBinding
+import com.example.vibration.databinding.ActivityPatternTestBinding
 import java.util.*
 
 class patternTestActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityPatternTestBinding
     var ampli = 100
     var dura = 100
     var direction = 0
 
-    @SuppressLint("ClickableViewAccessibility", "SetTextI18n")
+    @SuppressLint("ClickableViewAccessibility", "SetTextI18n", "ResourceType")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_pattern_test)
+        binding.drawRegion.setBackgroundResource(R.raw.straight)
         binding.drawRegion.setOnTouchListener(View.OnTouchListener { v, event ->
             //binding.textView.text = event.x.toString() + " " + binding.drawRegion.layoutParams.width.toString() + " " + event.y.toString() + " " + binding.drawRegion.layoutParams.height.toString()
             binding.textView.text = ampli.toString()
@@ -38,7 +40,7 @@ class patternTestActivity : AppCompatActivity() {
                 0 -> {
                     //binding.textView.text = "straight"
                     if (event.x > binding.drawRegion.layoutParams.width / 3 && event.x < binding.drawRegion.layoutParams.width * 2 / 3){
-                        val vibrator = (getSystemService(Service.VIBRATOR_SERVICE) as Vibrator).also {
+                        val vibrator = (getSystemService(VIBRATOR_SERVICE) as Vibrator).also {
                             it.vibrate(vib)
                         };  //设置手机振动
                         binding.textView.text = "vibrating"
@@ -51,7 +53,7 @@ class patternTestActivity : AppCompatActivity() {
                                 && event.y > binding.drawRegion.layoutParams.height / 3)
                         || ((event.y < binding.drawRegion.layoutParams.height / 3)
                                 &&(event.x < binding.drawRegion.layoutParams.width * 2 / 3))){
-                        val vibrator = (getSystemService(Service.VIBRATOR_SERVICE) as Vibrator).also {
+                        val vibrator = (getSystemService(VIBRATOR_SERVICE) as Vibrator).also {
                             it.vibrate(vib)
                         };  //设置手机振动
                         binding.textView.text = "vibrating"
@@ -65,7 +67,7 @@ class patternTestActivity : AppCompatActivity() {
                                 && event.y > binding.drawRegion.layoutParams.height / 3)
                         || ((event.y < binding.drawRegion.layoutParams.height / 3)
                                 &&(event.x > binding.drawRegion.layoutParams.width / 3))){
-                        val vibrator = (getSystemService(Service.VIBRATOR_SERVICE) as Vibrator).also {
+                        val vibrator = (getSystemService(VIBRATOR_SERVICE) as Vibrator).also {
                             it.vibrate(vib)
                         }  //设置手机振动
                         binding.textView.text = "vibrating"
