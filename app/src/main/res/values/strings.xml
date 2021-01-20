@@ -12,4 +12,6 @@
     <string name="pattern_navigation">Pattern Navigation</string>
     <string name="needle_navigation">Neddle Navigation</string>
     <string name="compass_navigation">Compass Navigation</string>
+    <string name="touch">touch</string>
+    <string name="motion">motion</string>
 </resources>

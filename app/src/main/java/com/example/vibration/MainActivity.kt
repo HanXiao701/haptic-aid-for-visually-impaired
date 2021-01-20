@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, needleTestActivity::class.java)
             startActivity(intent)
         }
+
+        binding.goNeedleVectorButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, needleVectorTestActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.goCompassButton.setOnClickListener {
             val intent = Intent(this@MainActivity, CompassTestActivity::class.java)
             startActivity(intent)

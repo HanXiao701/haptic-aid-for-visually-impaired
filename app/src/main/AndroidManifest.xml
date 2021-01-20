@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vibration">
-        <activity android:name=".CompassTestActivity"></activity>
+        <activity android:name=".needleVectorTestActivity"></activity>
+        <activity android:name=".CompassTestActivity" />
         <activity android:name=".needleTestActivity" />
         <activity android:name=".patternTestActivity" />
         <activity android:name=".MainActivity">

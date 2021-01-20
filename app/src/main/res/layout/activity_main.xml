@@ -9,37 +9,93 @@
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/goPatternButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pattern_navigation"
-            app:layout_constraintBottom_toTopOf="@+id/goNeedleButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
             android:id="@+id/goNeedleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/needle_navigation"
-            app:layout_constraintBottom_toTopOf="@+id/goCompassButton"
+            android:text="@string/touch"
+            app:layout_constraintBottom_toTopOf="@+id/compassTextView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/goNeedleVectorButton"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goPatternButton" />
+            app:layout_constraintTop_toBottomOf="@+id/neddleTextView" />
 
         <Button
             android:id="@+id/goCompassButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/compass_navigation"
+            android:text="@string/touch"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/goCompassVectorButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/compassTextView" />
+
+        <TextView
+            android:id="@+id/patterTextView"
+            style="@style/entryTitle"
+            android:text="@string/pattern_navigation"
+            app:layout_constraintBottom_toTopOf="@+id/goPatternButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/neddleTextView"
+            style="@style/entryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/needle_navigation"
+            app:layout_constraintBottom_toTopOf="@+id/goNeedleButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goPatternButton" />
+
+        <TextView
+            android:id="@+id/compassTextView"
+            style="@style/entryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/compass_navigation"
+            app:layout_constraintBottom_toTopOf="@+id/goCompassButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/goNeedleButton" />
+
+        <Button
+            android:id="@+id/goPatternButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/touch"
+            app:layout_constraintBottom_toTopOf="@+id/neddleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patterTextView" />
+
+        <Button
+            android:id="@+id/goNeedleVectorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/motion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/goNeedleButton"
+            app:layout_constraintTop_toTopOf="@+id/goNeedleButton" />
+
+        <Button
+            android:id="@+id/goCompassVectorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/motion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/goCompassButton"
+            app:layout_constraintTop_toTopOf="@+id/goCompassButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
